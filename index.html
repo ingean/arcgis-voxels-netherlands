@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <title>Geodata AS - Demo</title>
+    <title>Geodata AS - Voxeldemo</title>
     <link rel="icon" type="image/png" href="./images/geodata-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="./images/geodata-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="./images/geodata-96x96.png" sizes="96x96">
@@ -40,9 +40,6 @@
             <calcite-action data-action-id="layers" icon="layers" text="Kartlag"></calcite-action>
             <calcite-action data-action-id="basemaps" icon="basemap" text="Bakgrunnskart"></calcite-action>
             <calcite-action data-action-id="legend" icon="legend" text="Tegnforklaring"></calcite-action>
-            <calcite-action data-action-id="bookmarks" icon="bookmark" text="Bokmerker"></calcite-action>
-            <calcite-action data-action-id="print" icon="print" text="Utskrift"></calcite-action>
-            <calcite-action data-action-id="information" icon="information" text="Informasjon"></calcite-action>
           </calcite-action-bar>
   
           <!-- map-specific panels (each one provides a div for JS API widgets) -->
@@ -55,29 +52,7 @@
           <calcite-panel heading="Tegnforklaring" height-scale="l" width-scale="m" data-panel-id="legend" hidden>
             <div id="legend-container"></div>
           </calcite-panel>
-          <calcite-panel heading="Bokmerker" height-scale="l" width-scale="m" data-panel-id="bookmarks" hidden>
-            <div id="bookmarks-container"></div>
-          </calcite-panel>
-          <calcite-panel heading="Utskrift" height-scale="l" width-scale="m" data-panel-id="print" hidden>
-            <div id="print-container"></div>
-          </calcite-panel>
-  
-          <!-- info panel (populates with info from the web map) -->
-          <calcite-panel heading="Informasjon" data-panel-id="information" hidden>
-            <div id="info-content">
-              <img id="item-thumbnail" />
-              <div id="item-description">
-                <!--dynamically populated-->
-              </div>
-              <calcite-label layout="inline">
-                <b>Vurdering:</b>
-                <calcite-rating read-only>
-                  <!--dynamically populated-->
-                </calcite-rating>
-              </calcite-label>
-            </div>
-          </calcite-panel>
-  
+       
         </calcite-shell-panel>
   
         <div id="viewDiv"></div>
